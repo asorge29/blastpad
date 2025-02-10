@@ -1,6 +1,6 @@
 import styles from "@/styles/Panel.module.css";
 import {useEffect, useState} from "react";
-import AddFavorite from "@/components/addFavorite";
+import AddFavorite from "@/components/panels/addFavorite";
 
 
 export default function FavoritesPanel({color}) {

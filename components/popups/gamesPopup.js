@@ -15,7 +15,7 @@ export default function GamesPopup() {
   return (
     <>
       <img
-        onClick={() => setGamesPopup(true)}
+        onClick={() => setPopupOpen(true)}
         src={"games.png"}
         className={styles.popupTrigger}
         alt="Games Button"

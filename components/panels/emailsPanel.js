@@ -1,6 +1,6 @@
 import styles from "@/styles/Panel.module.css";
 import {useEffect, useState} from "react";
-import AddEmail from "@/components/addEmail";
+import AddEmail from "@/components/panels/addEmail";
 
 export default function EmailsPanel({color}) {
 

@@ -15,53 +15,53 @@ export default function Home() {
     document.getElementById("query").focus();
   }, []);
 
-  return (
-    <>
-      {/* Tab Metadata */}
-      <Head>
-        <title>BlastPad</title>
-        <meta name="description" content="Prepare for launch!"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="icon" href="/favicon.svg"/>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-84FXE5M316"></script>
-        <script id={"google-analytics"}>
-          {
-            '                    window.dataLayer = window.dataLayer || [];\n' +
-            '                    function gtag(){dataLayer.push(arguments);}\n' +
-            '                    gtag(\'js\', new Date());\n' +
-            '\n' +
-            '                    gtag(\'config\', \'G-84FXE5M316\');'
-          }
+  return (<>
+    {/* Tab Metadata */}
+    <Head>
+      <title>BlastPad</title>
+      <meta name="description" content="Prepare for launch!"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link rel="icon" href="/favicon.svg"/>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-84FXE5M316"></script>
+      <script id={"google-analytics"}>
+        {'                    window.dataLayer = window.dataLayer || [];\n' + '                    function gtag(){dataLayer.push(arguments);}\n' + '                    gtag(\'js\', new Date());\n' + '\n' + '                    gtag(\'config\', \'G-84FXE5M316\');'}
 
-        </script>
-      </Head>
-      <SettingsContext>
-        {/* Header and Searchbar */}
-        <main className={styles.main}>
-          <header className={styles.header}>
-            <div className={styles.popupTriggerContainer}>
+      </script>
+    </Head>
+    <SettingsContext>
+      {/* Header and Searchbar */}
+      <main className={styles.main}>
+        <header className={styles.header}>
+          <div className={styles.popupContainerLeft}>
+            <div className={styles.popupWrapper}>
               <SettingsPopup/>
+            </div>
+            <div className={styles.popupWrapper}>
               <AppsPopup/>
             </div>
-            <h1 className={styles.title}> BlastPad </h1>
-            <div className={styles.popupTriggerContainer}>
+          </div>
+          <h1 className={styles.title}> BlastPad </h1>
+          <div className={styles.popupContainerRight}>
+            <div className={styles.popupWrapper}>
               <InboxPopup/>
+            </div>
+            <div className={styles.popupWrapper}>
               <GamesPopup/>
             </div>
-          </header>
-          <SearchBar/>
-          <div className={styles.tileContainer}>
-            <TileLayout/>
           </div>
-          <a className={styles.coffee}
-             href={"https://www.venmo.com/u/PythonDarklord"}>
-            <div>
-              <img src={"coffee.svg"} alt="Coffee Logo"/>
-              <h2>Buy us a Coffee?</h2>
-            </div>
-          </a>
-        </main>
-      </SettingsContext>
-    </>
-  );
+        </header>
+        <SearchBar/>
+        <div className={styles.tileContainer}>
+          <TileLayout/>
+        </div>
+        <a className={styles.coffee}
+           href={"https://www.venmo.com/u/PythonDarklord"}>
+          <div>
+            <img src={"coffee.svg"} alt="Coffee Logo"/>
+            <h2>Buy us a Coffee?</h2>
+          </div>
+        </a>
+      </main>
+    </SettingsContext>
+  </>);
 }

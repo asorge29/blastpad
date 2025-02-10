@@ -1,6 +1,6 @@
 import styles from "@/styles/Panel.module.css"
 import {useEffect, useState} from "react";
-import AddTask from "@/components/addTask";
+import AddTask from "@/components/panels/addTask";
 
 
 export default function TaskPanel({color}) {

@@ -14,13 +14,13 @@
 .popup {
     position: fixed;
     border: 2px solid var(--purple);
+    padding: 36px;
     border-radius: 10px;
-    width: 40vw;
-    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 16px;
     background-color: var(--background);
     color: white;
     -webkit-box-shadow:0 0 91px 60px rgba(131,4,177,0.39);
@@ -28,7 +28,6 @@
     box-shadow: 0 0 91px 60px rgba(131,4,177,0.39);
     z-index: 220;
 }
-
 .popupTrigger {
     height: 5vh;
     transition-duration: 0.2s;
@@ -41,7 +40,6 @@
     height: 40vh;
     flex-direction: row;
 }
-
 .googleApps img{
     margin: 0 20px;
     transition-duration: 0.5s;
@@ -102,28 +100,22 @@
 .form {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
-    gap: 1.5vh;
+    gap: 16px;
     font-size: x-large;
 }
 
 .colorInput {
-    height: 60%;
+    height: 2em;
+    border: none;
+    outline: none;
+    width: 2em;
+    padding: 0;
+    border-radius: 50%;
 }
 
 .form h2 {
     margin: 0;
-}
-.form input {
-    outline: white;
-    background-color: var(--background);
-    border: 2px solid white;
-    font-size: x-large;
-    color: white;
-    padding: 0.6ch 1ch;
-    border-radius: 12px;
-    width: 60%;
 }
 .form button {
     background-color: var(--background);
@@ -217,15 +209,6 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 850px) {
-    .form {
-        gap: 3vh;
-        text-align: center;
-        font-size: 22px;
-    }
-    .popup {
-        width: 80vw;
-        height: 50vh;
-    }
     .form button {
         font-size: large;
     }
@@ -241,20 +224,7 @@ input:checked + .slider:before {
         border-radius: 15px;
     }
 }
-@media (max-height: 1100px) {
-    .form {
-        gap: 0.05vh;
-        font-size: 22px;
-    }
-    .popup {
-        width: 80vw;
-    }
-}
 @media (max-width: 340px) {
-    .form {
-        gap: 0.05vh;
-        font-size: 22px;
-    }
     .googleApps img {
         margin: 0 5px;
         height: 20px;
