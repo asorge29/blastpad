@@ -28,22 +28,28 @@
     box-shadow: 0 0 91px 60px rgba(131,4,177,0.39);
     z-index: 220;
 }
+.popup h3 {
+    margin: 0;
+}
 .popupTrigger {
     height: 5vh;
     transition-duration: 0.2s;
 }
-.googleApps {
+.apps {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 5vw;
-    height: 40vh;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    max-width: 25vw;
 }
-.googleApps img{
-    margin: 0 20px;
-    transition-duration: 0.5s;
+
+.apps > a > img:hover {
+    transform: scale(1.2);
 }
+.apps > a > img {
+     transition-duration: 0.2s;
+ }
 
 .steamdb {
     border-radius: 15px;
@@ -145,8 +151,8 @@
 }
 .close {
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 10px;
+    top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
